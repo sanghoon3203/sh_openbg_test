@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getRecommendations } from '../services/api';
 
-/* const RecommendedCoursesContent = ({ idToken }) => {
+const RecommendedCoursesContent = ({ idToken }) => {
   const [recommendations, setRecommendations] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -51,54 +51,5 @@ import { getRecommendations } from '../services/api';
   );
 };
 
-export default RecommendedCoursesContent; */
-
-const RecommendedCoursesContent = () => {
-  // 테스트용 하드코딩 데이터
-  const courses = [
-    {
-      course_title: "Udemy: React for Beginners",
-      platform: "Udemy",
-      url: "https://www.udemy.com/course/react-for-beginners"
-    },
-    {
-      course_title: "Coursera: Advanced JavaScript",
-      platform: "Coursera",
-      url: "https://www.coursera.org/learn/advanced-javascript"
-    },
-    {
-      course_title: "edX: Front-End Development",
-      platform: "edX",
-      url: "https://www.edx.org/course/front-end-development"
-    }
-  ];
-
-  return (
-    <div>
-      <h1 className="text-2xl font-bold mb-6">추천 강좌</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {courses.map((course, idx) => (
-          <div key={idx} className="bg-white rounded-xl p-4 shadow-sm">
-            <div className="h-36 bg-gray-200 rounded-lg mb-4"></div>
-            <h3 className="font-bold">{course.course_title}</h3>
-            <p className="text-gray-500 text-sm">{course.platform}</p>
-            <div className="mt-2 flex justify-between items-center">
-              <span className="text-purple-500 font-bold">무료</span>
-              <a 
-                href={course.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="bg-purple-500 text-white px-3 py-1 rounded-md text-sm"
-              >
-                수강하기
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default RecommendedCoursesContent;
+export default RecommendedCoursesContent; 
 
